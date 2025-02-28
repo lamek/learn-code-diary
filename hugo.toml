@@ -1,4 +1,38 @@
 baseURL = 'https://blog.ladevzo.com/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'diary'
+title = 'Learning to code'
+theme = 'typo-1.16.0'
+
+[params]
+sections = ["posts", "problems", "categories", "meta"]
+
+homeIntroTitle = 'Hi!'
+
+homeIntroContent = """
+In February of 2025 I set out to learn to code. With a lot of help from my friends and AI,
+I'm on my way there. This site is part blog, part study tool. I hope you find some part of
+of it interesting and/or useful.
+"""
+
+homeCollection = "posts"
+homeCollectionTitle = 'My latest posts'
+paginationSize = 100
+
+[[params.menu]]
+name = "home"
+url = "/"
+
+[[params.menu]]
+name = "blog"
+url = "/posts"
+
+[[params.menu]]
+name = "problems"
+url = "/categories"
+
+[[params.menu]]
+name = "meta"
+url = "/meta"
+
+
+

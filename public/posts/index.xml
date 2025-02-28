@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on My New Hugo Site</title>
+    <title>Posts on Learning to code</title>
     <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on My New Hugo Site</description>
+    <description>Recent content in Posts on Learning to code</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Feb 2025 16:35:44 -0800</lastBuildDate>
+    <lastBuildDate>Thu, 27 Feb 2025 12:37:58 -0800</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My New Post3</title>
+      <link>http://localhost:1313/posts/my-new-post3/</link>
+      <pubDate>Thu, 27 Feb 2025 12:37:58 -0800</pubDate>
+      <guid>http://localhost:1313/posts/my-new-post3/</guid>
+      <description>&lt;h2 class=&#34;heading&#34; id=&#34;my-third-new-post&#34;&gt;&#xA;  My THIRD new post&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#my-third-new-post&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;I needed some content filler so I made a handful of stubs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My New Post2</title>
+      <link>http://localhost:1313/posts/my-new-post2/</link>
+      <pubDate>Thu, 27 Feb 2025 12:37:54 -0800</pubDate>
+      <guid>http://localhost:1313/posts/my-new-post2/</guid>
+      <description>&lt;h2 class=&#34;heading&#34; id=&#34;my-second-new-post&#34;&gt;&#xA;  My second new post&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#my-second-new-post&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;I needed some content filler so I made a handful of stubs.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Learning to code</title>
       <link>http://localhost:1313/posts/my-first-post/</link>

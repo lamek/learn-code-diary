@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Meta on Learning to code</title>
+    <link>http://localhost:1313/meta/</link>
+    <description>Recent content in Meta on Learning to code</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Feb 2025 12:39:42 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/meta/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Learn</title>
+      <link>http://localhost:1313/meta/how-i-learn/</link>
+      <pubDate>Thu, 27 Feb 2025 12:39:42 -0800</pubDate>
+      <guid>http://localhost:1313/meta/how-i-learn/</guid>
+      <description>&lt;h2 class=&#34;heading&#34; id=&#34;meta-how-i-learn&#34;&gt;&#xA;  Meta How I Learn&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#meta-how-i-learn&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The meta section on how I learn.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How I Build</title>
+      <link>http://localhost:1313/meta/how-i-build/</link>
+      <pubDate>Thu, 27 Feb 2025 12:39:38 -0800</pubDate>
+      <guid>http://localhost:1313/meta/how-i-build/</guid>
+      <description>&lt;h2 class=&#34;heading&#34; id=&#34;meta-how-i-build&#34;&gt;&#xA;  Meta How I Build&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#meta-how-i-build&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The meta section on how I build.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Meta</title>
+      <link>http://localhost:1313/meta/meta/</link>
+      <pubDate>Thu, 27 Feb 2025 12:39:28 -0800</pubDate>
+      <guid>http://localhost:1313/meta/meta/</guid>
+      <description>&lt;h2 class=&#34;heading&#34; id=&#34;meta-section&#34;&gt;&#xA;  Meta section&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#meta-section&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This section is the section about the site.&lt;/p&gt;&#xA;&lt;p&gt;There are two sub-sections:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;How I build&lt;/li&gt;&#xA;&lt;li&gt;How I learn&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>
