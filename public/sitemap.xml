@@ -2,54 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://blog.ladevzo.com/</loc>
     <lastmod>2025-02-27T12:39:42-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/meta/how-i-learn/</loc>
+    <loc>https://blog.ladevzo.com/meta/how-i-learn/</loc>
     <lastmod>2025-02-27T12:39:42-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/meta/</loc>
+    <loc>https://blog.ladevzo.com/meta/</loc>
     <lastmod>2025-02-27T12:39:42-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/meta/how-i-build/</loc>
+    <loc>https://blog.ladevzo.com/meta/how-i-build/</loc>
     <lastmod>2025-02-27T12:39:38-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/meta/meta/</loc>
+    <loc>https://blog.ladevzo.com/meta/meta/</loc>
     <lastmod>2025-02-27T12:39:28-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/backtracking/</loc>
+    <loc>https://blog.ladevzo.com/categories/backtracking/</loc>
     <lastmod>2025-02-27T12:38:39-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://blog.ladevzo.com/categories/</loc>
     <lastmod>2025-02-27T12:38:39-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/linked-list/</loc>
+    <loc>https://blog.ladevzo.com/categories/linked-list/</loc>
     <lastmod>2025-02-27T12:38:33-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/problems/my-second-problem/</loc>
+    <loc>https://blog.ladevzo.com/problems/my-second-problem/</loc>
     <lastmod>2025-02-27T12:38:18-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/problems/</loc>
+    <loc>https://blog.ladevzo.com/problems/</loc>
     <lastmod>2025-02-27T12:38:18-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/problems/my-first-problem/</loc>
+    <loc>https://blog.ladevzo.com/problems/my-first-problem/</loc>
     <lastmod>2025-02-27T12:38:11-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/my-new-post3/</loc>
+    <loc>https://blog.ladevzo.com/posts/my-new-post3/</loc>
     <lastmod>2025-02-27T12:37:58-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://blog.ladevzo.com/posts/</loc>
     <lastmod>2025-02-27T12:37:58-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/my-new-post2/</loc>
+    <loc>https://blog.ladevzo.com/posts/my-new-post2/</loc>
     <lastmod>2025-02-27T12:37:54-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/my-first-post/</loc>
+    <loc>https://blog.ladevzo.com/posts/my-first-post/</loc>
     <lastmod>2025-02-24T16:35:44-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/problems/problem01/</loc>
+    <loc>https://blog.ladevzo.com/problems/problem01/</loc>
     <lastmod>2024-02-26T08:03:17-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://blog.ladevzo.com/tags/</loc>
   </url>
 </urlset>

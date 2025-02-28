@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Problems on Learning to code</title>
-    <link>http://localhost:1313/problems/</link>
+    <link>https://blog.ladevzo.com/problems/</link>
     <description>Recent content in Problems on Learning to code</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 27 Feb 2025 12:38:18 -0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/problems/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.ladevzo.com/problems/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My Second Problem</title>
-      <link>http://localhost:1313/problems/my-second-problem/</link>
+      <link>https://blog.ladevzo.com/problems/my-second-problem/</link>
       <pubDate>Thu, 27 Feb 2025 12:38:18 -0800</pubDate>
-      <guid>http://localhost:1313/problems/my-second-problem/</guid>
+      <guid>https://blog.ladevzo.com/problems/my-second-problem/</guid>
       <description>&lt;h2 class=&#34;heading&#34; id=&#34;dummy-second-problem-page&#34;&gt;&#xA;  dummy SECOND problem page&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#dummy-second-problem-page&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This is my dummy first problem page.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;here is some code&#xA;that &#xA;is (not): {&#xA;    really code&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     <item>
       <title>My First Problem</title>
-      <link>http://localhost:1313/problems/my-first-problem/</link>
+      <link>https://blog.ladevzo.com/problems/my-first-problem/</link>
       <pubDate>Thu, 27 Feb 2025 12:38:11 -0800</pubDate>
-      <guid>http://localhost:1313/problems/my-first-problem/</guid>
+      <guid>https://blog.ladevzo.com/problems/my-first-problem/</guid>
       <description>&lt;h2 class=&#34;heading&#34; id=&#34;dummy-first-problem-page&#34;&gt;&#xA;  dummy first problem page&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#dummy-first-problem-page&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This is my dummy first problem page.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;here is some code&#xA;that &#xA;is (not): {&#xA;    really code&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     <item>
       <title>Two Sum</title>
-      <link>http://localhost:1313/problems/problem01/</link>
+      <link>https://blog.ladevzo.com/problems/problem01/</link>
       <pubDate>Mon, 26 Feb 2024 08:03:17 -0800</pubDate>
-      <guid>http://localhost:1313/problems/problem01/</guid>
+      <guid>https://blog.ladevzo.com/problems/problem01/</guid>
       <description>&lt;h2 class=&#34;heading&#34; id=&#34;two-sum&#34;&gt;&#xA;  Two Sum&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#two-sum&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;My Quick Description:&lt;/strong&gt; Given an array of integers &lt;code&gt;nums&lt;/code&gt; and an integer &lt;code&gt;target&lt;/code&gt;, return &lt;em&gt;the indices of the two numbers that add up to &lt;code&gt;target&lt;/code&gt;&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ readFile &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;static/code/two-sum.py&amp;#34;&lt;/span&gt; }}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
   </channel>

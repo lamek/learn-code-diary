@@ -2,87 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Learning to code</title>
-    <link>http://localhost:1313/</link>
+    <link>https://blog.ladevzo.com/</link>
     <description>Recent content in Home on Learning to code</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 27 Feb 2025 12:39:42 -0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.ladevzo.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How I Learn</title>
-      <link>http://localhost:1313/meta/how-i-learn/</link>
+      <link>https://blog.ladevzo.com/meta/how-i-learn/</link>
       <pubDate>Thu, 27 Feb 2025 12:39:42 -0800</pubDate>
-      <guid>http://localhost:1313/meta/how-i-learn/</guid>
+      <guid>https://blog.ladevzo.com/meta/how-i-learn/</guid>
       <description>&lt;h2 class=&#34;heading&#34; id=&#34;meta-how-i-learn&#34;&gt;&#xA;  Meta How I Learn&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#meta-how-i-learn&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The meta section on how I learn.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How I Build</title>
-      <link>http://localhost:1313/meta/how-i-build/</link>
+      <link>https://blog.ladevzo.com/meta/how-i-build/</link>
       <pubDate>Thu, 27 Feb 2025 12:39:38 -0800</pubDate>
-      <guid>http://localhost:1313/meta/how-i-build/</guid>
+      <guid>https://blog.ladevzo.com/meta/how-i-build/</guid>
       <description>&lt;h2 class=&#34;heading&#34; id=&#34;meta-how-i-build&#34;&gt;&#xA;  Meta How I Build&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#meta-how-i-build&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The meta section on how I build.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Meta</title>
-      <link>http://localhost:1313/meta/meta/</link>
+      <link>https://blog.ladevzo.com/meta/meta/</link>
       <pubDate>Thu, 27 Feb 2025 12:39:28 -0800</pubDate>
-      <guid>http://localhost:1313/meta/meta/</guid>
+      <guid>https://blog.ladevzo.com/meta/meta/</guid>
       <description>&lt;h2 class=&#34;heading&#34; id=&#34;meta-section&#34;&gt;&#xA;  Meta section&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#meta-section&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This section is the section about the site.&lt;/p&gt;&#xA;&lt;p&gt;There are two sub-sections:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;How I build&lt;/li&gt;&#xA;&lt;li&gt;How I learn&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Backtracking</title>
-      <link>http://localhost:1313/categories/backtracking/</link>
+      <link>https://blog.ladevzo.com/categories/backtracking/</link>
       <pubDate>Thu, 27 Feb 2025 12:38:39 -0800</pubDate>
-      <guid>http://localhost:1313/categories/backtracking/</guid>
+      <guid>https://blog.ladevzo.com/categories/backtracking/</guid>
       <description>&lt;h2 class=&#34;heading&#34; id=&#34;backtracking&#34;&gt;&#xA;  Backtracking&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#backtracking&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Here is a paragraph about backtracking problems.&lt;/p&gt;&#xA;&lt;h2 class=&#34;heading&#34; id=&#34;here-is-a-list-of-all-the-backtracking-problems-i-worked-on&#34;&gt;&#xA;  Here is a list of all the backtracking problems I worked on.&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#here-is-a-list-of-all-the-backtracking-problems-i-worked-on&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;problem 1&lt;/li&gt;&#xA;&lt;li&gt;problem 2&lt;/li&gt;&#xA;&lt;li&gt;problem 3&lt;/li&gt;&#xA;&lt;li&gt;problem 4&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Linked List</title>
-      <link>http://localhost:1313/categories/linked-list/</link>
+      <link>https://blog.ladevzo.com/categories/linked-list/</link>
       <pubDate>Thu, 27 Feb 2025 12:38:33 -0800</pubDate>
-      <guid>http://localhost:1313/categories/linked-list/</guid>
+      <guid>https://blog.ladevzo.com/categories/linked-list/</guid>
       <description>&lt;h2 class=&#34;heading&#34; id=&#34;linked-lists&#34;&gt;&#xA;  Linked Lists&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#linked-lists&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Here is a paragraph about linked list problems.&lt;/p&gt;&#xA;&lt;h2 class=&#34;heading&#34; id=&#34;here-is-a-list-of-all-the-linked-list-problems-i-worked-on&#34;&gt;&#xA;  Here is a list of all the linked list problems I worked on.&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#here-is-a-list-of-all-the-linked-list-problems-i-worked-on&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;problem 1&lt;/li&gt;&#xA;&lt;li&gt;problem 2&lt;/li&gt;&#xA;&lt;li&gt;problem 3&lt;/li&gt;&#xA;&lt;li&gt;problem 4&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>My Second Problem</title>
-      <link>http://localhost:1313/problems/my-second-problem/</link>
+      <link>https://blog.ladevzo.com/problems/my-second-problem/</link>
       <pubDate>Thu, 27 Feb 2025 12:38:18 -0800</pubDate>
-      <guid>http://localhost:1313/problems/my-second-problem/</guid>
+      <guid>https://blog.ladevzo.com/problems/my-second-problem/</guid>
       <description>&lt;h2 class=&#34;heading&#34; id=&#34;dummy-second-problem-page&#34;&gt;&#xA;  dummy SECOND problem page&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#dummy-second-problem-page&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This is my dummy first problem page.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;here is some code&#xA;that &#xA;is (not): {&#xA;    really code&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     <item>
       <title>My First Problem</title>
-      <link>http://localhost:1313/problems/my-first-problem/</link>
+      <link>https://blog.ladevzo.com/problems/my-first-problem/</link>
       <pubDate>Thu, 27 Feb 2025 12:38:11 -0800</pubDate>
-      <guid>http://localhost:1313/problems/my-first-problem/</guid>
+      <guid>https://blog.ladevzo.com/problems/my-first-problem/</guid>
       <description>&lt;h2 class=&#34;heading&#34; id=&#34;dummy-first-problem-page&#34;&gt;&#xA;  dummy first problem page&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#dummy-first-problem-page&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This is my dummy first problem page.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;here is some code&#xA;that &#xA;is (not): {&#xA;    really code&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     <item>
       <title>My New Post3</title>
-      <link>http://localhost:1313/posts/my-new-post3/</link>
+      <link>https://blog.ladevzo.com/posts/my-new-post3/</link>
       <pubDate>Thu, 27 Feb 2025 12:37:58 -0800</pubDate>
-      <guid>http://localhost:1313/posts/my-new-post3/</guid>
+      <guid>https://blog.ladevzo.com/posts/my-new-post3/</guid>
       <description>&lt;h2 class=&#34;heading&#34; id=&#34;my-third-new-post&#34;&gt;&#xA;  My THIRD new post&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#my-third-new-post&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;I needed some content filler so I made a handful of stubs.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My New Post2</title>
-      <link>http://localhost:1313/posts/my-new-post2/</link>
+      <link>https://blog.ladevzo.com/posts/my-new-post2/</link>
       <pubDate>Thu, 27 Feb 2025 12:37:54 -0800</pubDate>
-      <guid>http://localhost:1313/posts/my-new-post2/</guid>
+      <guid>https://blog.ladevzo.com/posts/my-new-post2/</guid>
       <description>&lt;h2 class=&#34;heading&#34; id=&#34;my-second-new-post&#34;&gt;&#xA;  My second new post&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#my-second-new-post&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;I needed some content filler so I made a handful of stubs.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Learning to code</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
+      <link>https://blog.ladevzo.com/posts/my-first-post/</link>
       <pubDate>Mon, 24 Feb 2025 16:35:44 -0800</pubDate>
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <guid>https://blog.ladevzo.com/posts/my-first-post/</guid>
       <description>&lt;p&gt;This is a diary, or blog, capturing my journey learning to code.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Two Sum</title>
-      <link>http://localhost:1313/problems/problem01/</link>
+      <link>https://blog.ladevzo.com/problems/problem01/</link>
       <pubDate>Mon, 26 Feb 2024 08:03:17 -0800</pubDate>
-      <guid>http://localhost:1313/problems/problem01/</guid>
+      <guid>https://blog.ladevzo.com/problems/problem01/</guid>
       <description>&lt;h2 class=&#34;heading&#34; id=&#34;two-sum&#34;&gt;&#xA;  Two Sum&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#two-sum&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;My Quick Description:&lt;/strong&gt; Given an array of integers &lt;code&gt;nums&lt;/code&gt; and an integer &lt;code&gt;target&lt;/code&gt;, return &lt;em&gt;the indices of the two numbers that add up to &lt;code&gt;target&lt;/code&gt;&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ readFile &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;static/code/two-sum.py&amp;#34;&lt;/span&gt; }}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
   </channel>
