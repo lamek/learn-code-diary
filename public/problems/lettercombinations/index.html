@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+<link rel="icon" type="image/ico" href="http://localhost:1313//favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313//favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313//android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313//apple-touch-icon.png">
+
+<meta name="description" content=""/>
+
+
+
+<title>
+    
+    Letter Combinations | Learning to code
+    
+</title>
+
+<link rel="canonical" href="http://localhost:1313/problems/lettercombinations/"/>
+
+<meta property="og:url" content="http://localhost:1313/problems/lettercombinations/">
+  <meta property="og:site_name" content="Learning to code">
+  <meta property="og:title" content="Letter Combinations">
+  <meta property="og:description" content="Letter Combinations of a Phone Number # My Quick Description: Given a string of “phone number” digits, determine how many letter combinations those digits could represent.
+{{ readFile “static/code/test.txt” }}
+// we have to iterate through the digits input and build an array // of all possible letter combinations. /** * @param {string} digits * @return {string[]} */ var letterCombinations = function(digits) { // check the base case if (!digits) { return []; } let count = digits.length; // controls how long we will recurse for let combos = []; // stores our answers // build a lookup map to represnt a phone keypad const digitMap = { &#39;2&#39;: [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;], &#39;3&#39;: [&#39;d&#39;, &#39;e&#39;, &#39;f&#39;], &#39;4&#39;: [&#39;g&#39;, &#39;h&#39;, &#39;i&#39;], &#39;5&#39;: [&#39;j&#39;, &#39;k&#39;, &#39;l&#39;], &#39;6&#39;: [&#39;m&#39;, &#39;n&#39;, &#39;o&#39;], &#39;7&#39;: [&#39;p&#39;, &#39;q&#39;, &#39;r&#39;, &#39;s&#39;], &#39;8&#39;: [&#39;t&#39;, &#39;u&#39;, &#39;v&#39;], &#39;9&#39;: [&#39;w&#39;, &#39;x&#39;, &#39;y&#39;, &#39;z&#39;] }; // take the index of digits, and the current answer array // each recrusive call will add to the array function makeCombo(index, currentCombo) { if (index === digits.length) { // check length, exit when we&#39;re at the end of digits combos.push(currentCombo); return; } const digit = digits[index]; // pull the current number from digits const letters = digitMap[digit]; // look up the letters associated with that number for (const letter of letters) { // for each letter, call makeCombo makeCombo(index &#43; 1, currentCombo &#43; letter); } } makeCombo(0, &#39;&#39;); // Initial call to the helper function return combos; };">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="problems">
+    <meta property="article:published_time" content="2024-02-26T08:03:17-08:00">
+    <meta property="article:modified_time" content="2024-02-26T08:03:17-08:00">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.013f2ec38cea8e5e0ec1eb9e6048c28622524f63a910b746c54625882b200de9.css" media="all">
+
+
+
+
+
+</head>
+
+
+
+
+
+<body class="auto">
+
+  <div class="content">
+    <header>
+      
+
+<div class="header">
+
+    
+
+    <h1 class="header-title">
+        <a href="http://localhost:1313/">Learning to code</a>
+    </h1>
+
+    <div class="flex">
+        
+
+        
+        
+      
+        <p class="small ">
+            <a href="/" >
+                /home
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/posts" >
+                /blog
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/categories" >
+                /problems
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/meta" >
+                /meta
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
+
+</div>
+
+    </header>
+
+    <main class="main">
+      
+
+
+
+
+
+
+
+<div >
+
+  <div class="single-intro-container">
+
+    
+
+    <h1 class="single-title">Letter Combinations</h1>
+    
+
+    
+
+    <p class="single-readtime">
+      
+      
+      
+      <time datetime="2024-02-26T08:03:17-08:00">February 26, 2024</time>
+      
+
+      
+    </p>
+
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div class="single-content">
+    <h2 class="heading" id="letter-combinations-of-a-phone-number">
+  Letter Combinations of a Phone Number
+  <a class="anchor" href="#letter-combinations-of-a-phone-number">#</a>
+</h2>
+<p><strong>My Quick Description:</strong> Given a string of &ldquo;phone number&rdquo; digits, determine how many letter combinations those digits could represent.</p>
+<p>{{ readFile &ldquo;static/code/test.txt&rdquo; }}</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// we have to iterate through the digits input and build an array
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// of all possible letter combinations.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @param {string} digits
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @return {string[]}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">letterCombinations</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">digits</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// check the base case
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">digits</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> [];
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">count</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">digits</span>.<span style="color:#a6e22e">length</span>; <span style="color:#75715e">// controls how long we will recurse for
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">combos</span> <span style="color:#f92672">=</span> []; <span style="color:#75715e">// stores our answers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// build a lookup map to represnt a phone keypad
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">digitMap</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;2&#39;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>],
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;3&#39;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;d&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>, <span style="color:#e6db74">&#39;f&#39;</span>],
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;4&#39;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;g&#39;</span>, <span style="color:#e6db74">&#39;h&#39;</span>, <span style="color:#e6db74">&#39;i&#39;</span>],
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;5&#39;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;j&#39;</span>, <span style="color:#e6db74">&#39;k&#39;</span>, <span style="color:#e6db74">&#39;l&#39;</span>],
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;6&#39;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;m&#39;</span>, <span style="color:#e6db74">&#39;n&#39;</span>, <span style="color:#e6db74">&#39;o&#39;</span>],
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;7&#39;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;p&#39;</span>, <span style="color:#e6db74">&#39;q&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>, <span style="color:#e6db74">&#39;s&#39;</span>],
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;8&#39;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;t&#39;</span>, <span style="color:#e6db74">&#39;u&#39;</span>, <span style="color:#e6db74">&#39;v&#39;</span>],
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;9&#39;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;w&#39;</span>, <span style="color:#e6db74">&#39;x&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;z&#39;</span>]
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// take the index of digits, and the current answer array
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// each recrusive call will add to the array
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">makeCombo</span>(<span style="color:#a6e22e">index</span>, <span style="color:#a6e22e">currentCombo</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">index</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">digits</span>.<span style="color:#a6e22e">length</span>) { <span style="color:#75715e">// check length, exit when we&#39;re at the end of digits
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#a6e22e">combos</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">currentCombo</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">digit</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">digits</span>[<span style="color:#a6e22e">index</span>]; <span style="color:#75715e">// pull the current number from digits
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">letters</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">digitMap</span>[<span style="color:#a6e22e">digit</span>]; <span style="color:#75715e">// look up the letters associated with that number
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">letter</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">letters</span>) { <span style="color:#75715e">// for each letter, call makeCombo
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#a6e22e">makeCombo</span>(<span style="color:#a6e22e">index</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">currentCombo</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">letter</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">makeCombo</span>(<span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;&#39;</span>); <span style="color:#75715e">// Initial call to the helper function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">combos</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div>
+    
+  </div>
+
+  
+
+
+  
+
+  
+  
+
+<div class="single-pagination">
+    <hr />
+
+    <div class="flex">
+
+        <div class="single-pagination-prev">
+            
+            <div class="single-pagination-container-prev">
+                <div class="single-pagination-text">←</div>
+                <div class="single-pagination-text">
+                    <a href="/problems/problem01/">
+                        Two Sum
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="single-pagination-next">
+            
+            <div class="single-pagination-container-next">
+                <div class="single-pagination-text">
+                    <a href="/problems/my-first-problem/">
+                        My First Problem
+                    </a>
+                </div>
+                <div class="single-pagination-text">→</div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <hr />
+</div>
+
+
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+    </main>
+  </div>
+
+  <footer>
+    
+
+    
+    <p>Powered by
+        <a href="https://gohugo.io/">Hugo</a>
+        and
+        <a href="https://github.com/tomfran/typo">tomfran/typo</a>
+    </p>
+    
+    
+    
+
+
+  </footer>
+
+  
+
+</body>
+
+<script>
+
+  function isAuto() {
+    return document.body.classList.contains("auto");
+  }
+
+  function setTheme() {
+    if (!isAuto()) {
+      return
+    }
+
+    document.body.classList.remove("auto");
+    let cls = "light";
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      cls = "dark";
+    }
+
+    document.body.classList.add(cls);
+  }
+
+  function invertBody() {
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
+  }
+
+  if (isAuto()) {
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(invertBody);
+  }
+
+  setTheme();
+
+</script>
+
+<script defer src="/js/copy-code.js"></script>
+</html>
