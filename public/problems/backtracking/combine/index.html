@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+<link rel="icon" type="image/ico" href="http://localhost:1313//favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313//favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313//android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313//apple-touch-icon.png">
+
+<meta name="description" content=""/>
+
+
+
+<title>
+    
+    Combinations | Learning to code
+    
+</title>
+
+<link rel="canonical" href="http://localhost:1313/problems/backtracking/combine/"/>
+
+<meta property="og:url" content="http://localhost:1313/problems/backtracking/combine/">
+  <meta property="og:site_name" content="Learning to code">
+  <meta property="og:title" content="Combinations">
+  <meta property="og:description" content="Given 2 integers, n and k, return all possible combinations of length k, for numbers 1 through n. 1,2 and 2,1 are the same. i.e. order doesn’t matter
+/** * @param {number} n * @param {number} k * @return {number[][]} */ var combine = function(n, k) { // initialzie your answer array let combos = []; // define a recursive function // the function takes a start point, n and k, and the current combo. // the function will recurse down until the current combo is the same length // as k. // Then it will push that combo to the answer array, and go up a step, finishing // building the combos for the next letters. function makeCombo(start, n, k, currentCombo) { // exit check. Once the currentCombo reaches length k, we need to exit and go up a level // in our stack. if (currentCombo.length === k) { combos.push([...currentCombo]); return; } // call the recursive function. // Call once for each number, from i through n // This avoids duplicating numbers for (let i = start; i &lt;= n; i&#43;&#43;) { // you&#39;ll only hit a combo at the &#34;bottom&#34; of the stack currentCombo.push(i); // increment i, and continue with all the other values makeCombo(i &#43; 1, n, k, currentCombo); // we only reach this point when exiting the stack. // becase we JUST pushed the current combo, pop it // before exiting up 1 level. currentCombo.pop(); } } // make the initial call to your recursive function makeCombo(1, n, k, []); // return the results array return combos; };">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="problems">
+    <meta property="article:published_time" content="2025-03-08T10:47:49-08:00">
+    <meta property="article:modified_time" content="2025-03-08T10:47:49-08:00">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.dd2d7bf20158140665fc8add79c9147fa45c0bffea0e44e2f8f410f950af206e.css" media="all">
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body class="auto | light | dark">
+
+  <div class="content">
+    <header>
+      
+
+<div class="header">
+
+    
+
+    <h1 class="header-title">
+        <a href="http://localhost:1313/">Learning to code</a>
+    </h1>
+
+    <div class="flex">
+        
+
+        
+        
+      
+        <p class="small ">
+            <a href="/" >
+                /home
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/posts" >
+                /blog
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/problems" >
+                /problems
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/meta" >
+                /meta
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
+
+</div>
+
+    </header>
+
+    <main class="main">
+      
+
+
+
+
+
+
+
+<div >
+
+  <div class="single-intro-container">
+
+    
+
+    <h1 class="single-title">Combinations</h1>
+    
+
+    
+
+    <p class="single-readtime">
+      
+      
+      
+      <time datetime="2025-03-08T10:47:49-08:00">March 8, 2025</time>
+      
+
+      
+    </p>
+
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div class="single-content">
+    <p>Given 2 integers, n and k, return all possible combinations
+of length k, for numbers 1 through n. 1,2 and 2,1 are the same.
+i.e. order doesn&rsquo;t matter</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"> * @param {number} n
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"> * @param {number} k
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"> * @return {number[][]}
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">var</span> combine <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#f38ba8">function</span>(n, k) {
+</span></span><span style="display:flex;"><span>    <span style="color:#6c7086;font-style:italic">// initialzie your answer array
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>    <span style="color:#f38ba8">let</span> combos <span style="color:#89dceb;font-weight:bold">=</span> [];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6c7086;font-style:italic">// define a recursive function
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>    <span style="color:#6c7086;font-style:italic">// the function takes a start point, n and k, and the current combo.
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>    <span style="color:#6c7086;font-style:italic">// the function will recurse down until the current combo is the same length
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>    <span style="color:#6c7086;font-style:italic">// as k.
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>    <span style="color:#6c7086;font-style:italic">// Then it will push that combo to the answer array, and go up a step, finishing
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>    <span style="color:#6c7086;font-style:italic">// building the combos for the next letters.
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>    <span style="color:#f38ba8">function</span> makeCombo(start, n, k, currentCombo) {
+</span></span><span style="display:flex;"><span>        <span style="color:#6c7086;font-style:italic">// exit check. Once the currentCombo reaches length k, we need to exit and go up a level
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>        <span style="color:#6c7086;font-style:italic">// in our stack.
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>        <span style="color:#cba6f7">if</span> (currentCombo.length <span style="color:#89dceb;font-weight:bold">===</span> k) {
+</span></span><span style="display:flex;"><span>            combos.push([...currentCombo]);
+</span></span><span style="display:flex;"><span>            <span style="color:#cba6f7">return</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#6c7086;font-style:italic">// call the recursive function.
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>        <span style="color:#6c7086;font-style:italic">// Call once for each number, from i through n
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>        <span style="color:#6c7086;font-style:italic">// This avoids duplicating numbers
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>        <span style="color:#cba6f7">for</span> (<span style="color:#f38ba8">let</span> i <span style="color:#89dceb;font-weight:bold">=</span> start; i <span style="color:#89dceb;font-weight:bold">&lt;=</span> n; i<span style="color:#89dceb;font-weight:bold">++</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#6c7086;font-style:italic">// you&#39;ll only hit a combo at the &#34;bottom&#34; of the stack
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>            currentCombo.push(i);
+</span></span><span style="display:flex;"><span>            <span style="color:#6c7086;font-style:italic">// increment i, and continue with all the other values
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>            makeCombo(i <span style="color:#89dceb;font-weight:bold">+</span> <span style="color:#fab387">1</span>, n, k, currentCombo);
+</span></span><span style="display:flex;"><span>            <span style="color:#6c7086;font-style:italic">// we only reach this point when exiting the stack.
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>            <span style="color:#6c7086;font-style:italic">// becase we JUST pushed the current combo, pop it
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>            <span style="color:#6c7086;font-style:italic">// before exiting up 1 level.
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>            currentCombo.pop();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#6c7086;font-style:italic">// make the initial call to your recursive function
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>    makeCombo(<span style="color:#fab387">1</span>, n, k, []);
+</span></span><span style="display:flex;"><span>    <span style="color:#6c7086;font-style:italic">// return the results array
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>    <span style="color:#cba6f7">return</span> combos;
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div>
+    
+  </div>
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+    </main>
+  </div>
+
+  <footer>
+    
+
+    
+    <p>Powered by
+        <a href="https://gohugo.io/">Hugo</a>
+        and
+        <a href="https://github.com/tomfran/typo">tomfran/typo</a>
+    </p>
+    
+    
+    
+
+
+  </footer>
+
+  
+
+</body>
+
+<script src="/js/theme-switch.js"></script>
+<script defer src="/js/copy-code.js"></script>
+</html>

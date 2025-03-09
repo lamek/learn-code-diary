@@ -1,0 +1,4 @@
+https://github.com/tomfran/typo.git
+
+git submodule add https://github.com/tomfran/typo.git themes/typo
+

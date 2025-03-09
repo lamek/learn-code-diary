@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+<link rel="icon" type="image/ico" href="http://localhost:1313//favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313//favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313//android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313//apple-touch-icon.png">
+
+<meta name="description" content=""/>
+
+
+
+<title>
+    
+    Has Cycle | Learning to code
+    
+</title>
+
+<link rel="canonical" href="http://localhost:1313/problems/linked-list/has-cycle/"/>
+
+<meta property="og:url" content="http://localhost:1313/problems/linked-list/has-cycle/">
+  <meta property="og:site_name" content="Learning to code">
+  <meta property="og:title" content="Has Cycle">
+  <meta property="og:description" content="“iterate” through a linked list to check if any of the nodes point back to a previous node, creating a cycle.
+/** * Definition for singly-linked list. * function ListNode(val) { * this.val = val; * this.next = null; * } */ /** * @param {ListNode} head * @return {boolean} */ var hasCycle = function(head) { let visited = new Set(); // use a set to track which nodes have been visited let current = head; // pointer, not SURE we need this. Can&#39;t we just use head? while (current !== null) { // null signals the end of the list if (visited.has(current)) { // check if the node has been visited return true; } else { visited.add(current); // if not, add it to the list current = current.next; // update our pointer. } } return false; // return false if we make it through the entire list }; // Floyd&#39;s Cycle Finding Algorithm // Provided by gemini, supposed to be faster. // /** // * Definition for singly-linked list. // * function ListNode(val) { // * this.val = val; // * this.next = null; // * } // */ // /** // * @param {ListNode} head // * @return {boolean} // */ // var hasCycle = function(head) { // if (!head || !head.next) { // return false; // } // let slow = head; // let fast = head.next; // while (slow !== fast) { // if (!fast || !fast.next) { // return false; // } // slow = slow.next; // fast = fast.next.next; // } // return true; // };">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="problems">
+    <meta property="article:published_time" content="2025-03-08T11:15:50-08:00">
+    <meta property="article:modified_time" content="2025-03-08T11:15:50-08:00">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.dd2d7bf20158140665fc8add79c9147fa45c0bffea0e44e2f8f410f950af206e.css" media="all">
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body class="auto | light | dark">
+
+  <div class="content">
+    <header>
+      
+
+<div class="header">
+
+    
+
+    <h1 class="header-title">
+        <a href="http://localhost:1313/">Learning to code</a>
+    </h1>
+
+    <div class="flex">
+        
+
+        
+        
+      
+        <p class="small ">
+            <a href="/" >
+                /home
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/posts" >
+                /blog
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/problems" >
+                /problems
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/meta" >
+                /meta
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
+
+</div>
+
+    </header>
+
+    <main class="main">
+      
+
+
+
+
+
+
+
+<div >
+
+  <div class="single-intro-container">
+
+    
+
+    <h1 class="single-title">Has Cycle</h1>
+    
+
+    
+
+    <p class="single-readtime">
+      
+      
+      
+      <time datetime="2025-03-08T11:15:50-08:00">March 8, 2025</time>
+      
+
+      
+    </p>
+
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div class="single-content">
+    <p>&ldquo;iterate&rdquo; through a linked list to check if any of the nodes
+point back to a previous node, creating a cycle.</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"> * Definition for singly-linked list.
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"> * function ListNode(val) {
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"> *     this.val = val;
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"> *     this.next = null;
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"> * }
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"> */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"> * @param {ListNode} head
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"> * @return {boolean}
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"> */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">var</span> hasCycle <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#f38ba8">function</span>(head) {
+</span></span><span style="display:flex;"><span>    <span style="color:#f38ba8">let</span> visited <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#cba6f7">new</span> Set(); <span style="color:#6c7086;font-style:italic">// use a set to track which nodes have been visited
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>    <span style="color:#f38ba8">let</span> current <span style="color:#89dceb;font-weight:bold">=</span> head; <span style="color:#6c7086;font-style:italic">// pointer, not SURE we need this. Can&#39;t we just use head?
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">while</span> (current <span style="color:#89dceb;font-weight:bold">!==</span> <span style="color:#fab387">null</span>) { <span style="color:#6c7086;font-style:italic">// null signals the end of the list
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>        <span style="color:#cba6f7">if</span> (visited.has(current)) { <span style="color:#6c7086;font-style:italic">// check if the node has been visited
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>            <span style="color:#cba6f7">return</span> <span style="color:#fab387">true</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#cba6f7">else</span> {
+</span></span><span style="display:flex;"><span>            visited.add(current); <span style="color:#6c7086;font-style:italic">// if not, add it to the list
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>            current <span style="color:#89dceb;font-weight:bold">=</span> current.next; <span style="color:#6c7086;font-style:italic">// update our pointer.
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">return</span> <span style="color:#fab387">false</span>; <span style="color:#6c7086;font-style:italic">// return false if we make it through the entire list
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>    
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">// Floyd&#39;s Cycle Finding Algorithm
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">// Provided by gemini, supposed to be faster.
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">// /**
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">//  * Definition for singly-linked list.
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">//  * function ListNode(val) {
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">//  * this.val = val;
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">//  * this.next = null;
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">//  * }
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">//  */
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">// /**
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">//  * @param {ListNode} head
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">//  * @return {boolean}
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">//  */
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">// var hasCycle = function(head) {
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">//     if (!head || !head.next) {
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">//         return false;
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">//     }
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">//     let slow = head;
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">//     let fast = head.next;
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">//     while (slow !== fast) {
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">//         if (!fast || !fast.next) {
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">//             return false;
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">//         }
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">//         slow = slow.next;
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">//         fast = fast.next.next;
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">//     }
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">//     return true;
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">// };
+</span></span></span></code></pre></div>
+    
+  </div>
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+    </main>
+  </div>
+
+  <footer>
+    
+
+    
+    <p>Powered by
+        <a href="https://gohugo.io/">Hugo</a>
+        and
+        <a href="https://github.com/tomfran/typo">tomfran/typo</a>
+    </p>
+    
+    
+    
+
+
+  </footer>
+
+  
+
+</body>
+
+<script src="/js/theme-switch.js"></script>
+<script defer src="/js/copy-code.js"></script>
+</html>

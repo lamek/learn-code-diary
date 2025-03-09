@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+<link rel="icon" type="image/ico" href="http://localhost:1313//favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313//favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313//android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313//apple-touch-icon.png">
+
+<meta name="description" content=""/>
+
+
+
+<title>
+    
+    Ransom Note | Learning to code
+    
+</title>
+
+<link rel="canonical" href="http://localhost:1313/problems/hashmap/can-construct/"/>
+
+<meta property="og:url" content="http://localhost:1313/problems/hashmap/can-construct/">
+  <meta property="og:site_name" content="Learning to code">
+  <meta property="og:title" content="Ransom Note">
+  <meta property="og:description" content="In this problem we’re given a magazine and a ransom note. We have to determine if the magazine has enough letters to construct the ransom note.
+The approach I used was a single map. Iterate through the magazine, storing each letter as a key, and incrementing it’s value every time you add an instance of a letter.
+Then, iterate through the ransom note. Each time you evaluate a letter, check for it in your map. If you don’t find it, you can fail early. If you do find it, decrement the count. Do a quick check to make sure the count didn’t go below 0. If it did, then the magazine does not have enough of that letter.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="problems">
+    <meta property="article:published_time" content="2025-03-08T10:05:55-08:00">
+    <meta property="article:modified_time" content="2025-03-08T10:05:55-08:00">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.dd2d7bf20158140665fc8add79c9147fa45c0bffea0e44e2f8f410f950af206e.css" media="all">
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body class="auto | light | dark">
+
+  <div class="content">
+    <header>
+      
+
+<div class="header">
+
+    
+
+    <h1 class="header-title">
+        <a href="http://localhost:1313/">Learning to code</a>
+    </h1>
+
+    <div class="flex">
+        
+
+        
+        
+      
+        <p class="small ">
+            <a href="/" >
+                /home
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/posts" >
+                /blog
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/problems" >
+                /problems
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/meta" >
+                /meta
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
+
+</div>
+
+    </header>
+
+    <main class="main">
+      
+
+
+
+
+
+
+
+<div >
+
+  <div class="single-intro-container">
+
+    
+
+    <h1 class="single-title">Ransom Note</h1>
+    
+
+    
+
+    <p class="single-readtime">
+      
+      
+      
+      <time datetime="2025-03-08T10:05:55-08:00">March 8, 2025</time>
+      
+
+      
+    </p>
+
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div class="single-content">
+    <p>In this problem we&rsquo;re given a magazine and a ransom note. We have to determine
+if the magazine has enough letters to construct the ransom note.</p>
+<p>The approach I used was a single map. Iterate through the magazine, storing each
+letter as a key, and incrementing it&rsquo;s value every time you add an instance of a
+letter.</p>
+<p>Then, iterate through the ransom note. Each time you evaluate a letter,
+check for it in your map. If you don&rsquo;t find it, you can fail early. If you do
+find it, decrement the count. Do a quick check to make sure the count didn&rsquo;t go
+below 0. If it did, then the magazine does not have enough of that letter.</p>
+<p>If you make it all the way through the ransom note, then you can return true.</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"> * @param {string} ransomNote
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"> * @param {string} magazine
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"> * @return {boolean}
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"> */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">var</span> canConstruct <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#f38ba8">function</span>(ransomNote, magazine) {
+</span></span><span style="display:flex;"><span>    <span style="color:#6c7086;font-style:italic">// check if the note is longer than magazine
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>    <span style="color:#6c7086;font-style:italic">// and if so return false
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>    <span style="color:#cba6f7">if</span> (ransomNote.length <span style="color:#89dceb;font-weight:bold">&gt;</span> magazine.length) {
+</span></span><span style="display:flex;"><span>        <span style="color:#cba6f7">return</span> <span style="color:#fab387">false</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6c7086;font-style:italic">// set up our map
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>    <span style="color:#cba6f7">const</span> counts <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#cba6f7">new</span> Map();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6c7086;font-style:italic">// create a letter count for magazine
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>    <span style="color:#cba6f7">for</span> (<span style="color:#f38ba8">let</span> i <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#fab387">0</span>; i <span style="color:#89dceb;font-weight:bold">&lt;</span> magazine.length; i<span style="color:#89dceb;font-weight:bold">++</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#cba6f7">const</span> letter <span style="color:#89dceb;font-weight:bold">=</span> magazine[i]; <span style="color:#6c7086;font-style:italic">// should this be const instead of let?
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>        <span style="color:#cba6f7">if</span> (counts.has(letter)) {
+</span></span><span style="display:flex;"><span>            counts.set(letter, (counts.get(letter) <span style="color:#89dceb;font-weight:bold">||</span> <span style="color:#fab387">0</span>) <span style="color:#89dceb;font-weight:bold">+</span> <span style="color:#fab387">1</span>);
+</span></span><span style="display:flex;"><span>        } <span style="color:#cba6f7">else</span> {
+</span></span><span style="display:flex;"><span>            counts.set(letter, <span style="color:#fab387">1</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6c7086;font-style:italic">// make a pass through ransomNote, checking
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>    <span style="color:#6c7086;font-style:italic">// against the values in the count map
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>    <span style="color:#cba6f7">for</span> (<span style="color:#f38ba8">let</span> j <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#fab387">0</span>; j <span style="color:#89dceb;font-weight:bold">&lt;</span> ransomNote.length; j<span style="color:#89dceb;font-weight:bold">++</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#cba6f7">const</span> ransomLetter <span style="color:#89dceb;font-weight:bold">=</span> ransomNote[j];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#6c7086;font-style:italic">// check if the magazine map has this letter
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>        <span style="color:#6c7086;font-style:italic">// and if not return false
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>        <span style="color:#cba6f7">if</span> (<span style="color:#89dceb;font-weight:bold">!</span>counts.has(ransomLetter)) {
+</span></span><span style="display:flex;"><span>            <span style="color:#cba6f7">return</span> <span style="color:#fab387">false</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#cba6f7">else</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#6c7086;font-style:italic">// if the map does have the letter, decrement it
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>            counts.set(ransomLetter, (counts.get(ransomLetter) <span style="color:#89dceb;font-weight:bold">-</span> <span style="color:#fab387">1</span>));
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#6c7086;font-style:italic">// check that the letter value didn&#39;t go below 0.
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>        <span style="color:#6c7086;font-style:italic">// if it did, return false.
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>        <span style="color:#cba6f7">if</span> (counts.get(ransomLetter) <span style="color:#89dceb;font-weight:bold">&lt;</span> <span style="color:#fab387">0</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#cba6f7">return</span> <span style="color:#fab387">false</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">return</span> <span style="color:#fab387">true</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div>
+    
+  </div>
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+    </main>
+  </div>
+
+  <footer>
+    
+
+    
+    <p>Powered by
+        <a href="https://gohugo.io/">Hugo</a>
+        and
+        <a href="https://github.com/tomfran/typo">tomfran/typo</a>
+    </p>
+    
+    
+    
+
+
+  </footer>
+
+  
+
+</body>
+
+<script src="/js/theme-switch.js"></script>
+<script defer src="/js/copy-code.js"></script>
+</html>

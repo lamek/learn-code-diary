@@ -1,10 +1,10 @@
 baseURL = 'https://blog.ladevzo.com/'
 languageCode = 'en-us'
 title = 'Learning to code'
-theme = 'typo'
+theme = 'typo-1.16.0'
 
 [params]
-sections = ["posts", "problems", "meta"]
+sections = ["posts", "problems", "categories", "meta"]
 
 theme = 'auto | light | dark'
 
@@ -30,7 +30,7 @@ url = "/posts"
 
 [[params.menu]]
 name = "problems"
-url = "/problems"
+url = "/categories"
 
 [[params.menu]]
 name = "meta"
