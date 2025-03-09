@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+
+  <h2>Sub-sections</h2>
+  <ul>
+    {{ range .Pages }}
+      {{ if ne .Title "Meta" }}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+{{ end }}
