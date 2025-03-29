@@ -35,52 +35,27 @@
 {{ if .Site.Params.homeCollection }}
 
 <div class="list-container">
-    
     {{ with .Site.Params.homeCollectionTitle}}
     <h1> {{ . }} </h1>
     {{ end }}
 
-    
     {{ $pages := where .Site.RegularPages "Section" .Site.Params.homeCollection
-    }} 
+    }}
 
-    
     {{ $paginationSize := 1}}
     {{ if (gt .Site.Params.paginationSize 0) }}
-    {{ $paginationSize = 3 }}
-    {{ end }} 
+    {{ $paginationSize = .Site.Params.paginationSize }}
+    {{ end }}
 
-    
-    {{ $paginator := .Paginate $pages $paginationSize }} 
+    {{ $paginator := .Paginate $pages $paginationSize }}
 
-    
     {{ range $index, $page := $paginator.Pages }}
     {{ partial "post-entry.html" $page}}
-    {{ end }} 
+    {{ end }}
 
-    
-    {{ partial "pagination-controls.html" $paginator}} 
+    {{ partial "pagination-controls.html" $paginator}}
 
     {{ end }}
 </div>
 
-{{/* Problems Section */}}
-<div class="list-container">
-    <h1>Problems</h1>
-    <p>A list of LeetCode problems I've solved.</p>
-    <a href="/categories/">View all problems</a>
-</div>
-
-{{/* Meta Section */}}
-<div class="list-container">
-    <h1>Meta</h1>
-    <p>A collection of pages about this site, and my learning process.</p>
-    <a href="/meta/">Read more about Meta</a>
-</div>
-
 {{ end }}
-
-
-
-
-

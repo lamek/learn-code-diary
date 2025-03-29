@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Learning to code</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Feb 2025 12:37:54 -0800</lastBuildDate>
+    <lastBuildDate>Thu, 27 Feb 2025 12:37:58 -0800</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recapping and resetting my strategy</title>
+      <link>http://localhost:1313/posts/recap-and-reset/</link>
+      <pubDate>Thu, 27 Feb 2025 12:37:58 -0800</pubDate>
+      <guid>http://localhost:1313/posts/recap-and-reset/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m 3 weeks in to my coding journey. It&amp;rsquo;s been a blast so far. Robert Frost had&#xA;some line about &amp;ldquo;Making my advocation my vocation&amp;rdquo;. It&amp;rsquo;s great when you find&#xA;something in life that you&amp;rsquo;re so excited about you want to give your all to it.&lt;/p&gt;&#xA;&lt;p&gt;After 3 weeks I had solved a whopping 45 leetcode problems. I could tell I was&#xA;into it. Being a noobie, obviously I was using a lot of resources, especially&#xA;AI, to help.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Blogging my journey</title>
       <link>http://localhost:1313/posts/blogging-my-journey/</link>

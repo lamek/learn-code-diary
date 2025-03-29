@@ -1,8 +1,9 @@
-+++
-date = '2025-02-27T12:37:58-08:00'
-draft = false
-title = 'Recapping and resetting my strategy'
-+++
+---
+date: 2025-02-27T12:37:58-08:00
+draft: false
+title: "Recapping and resetting my strategy"
+type: "blog"
+---
 
 I'm 3 weeks in to my coding journey. It's been a blast so far. Robert Frost had
 some line about "Making my advocation my vocation". It's great when you find

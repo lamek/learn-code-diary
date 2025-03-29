@@ -11,9 +11,15 @@ theme = 'auto | light | dark'
 homeIntroTitle = 'Hi!'
 
 homeIntroContent = """
-In February of 2025 I set out to learn to code. With a lot of help from my friends and AI,
-I'm on my way there. This site is part blog, part study tool. I hope you find some part of
-of it interesting and/or useful.
+In February of 2025 I set out to learn to code. With a lot of help from my
+friends and AI, I'm on my way there. This site is part blog, part study tool. I
+hope you find some part of of it interesting and/or useful.
+
+Check out my posts where [I write about this journey](/posts).
+
+Read over [my solutions](/problems). I like to write about the code as a study tool.
+
+The [meta section](/meta) has notes on how I study (using AI), and how I built this site.
 """
 
 homeCollection = "posts"

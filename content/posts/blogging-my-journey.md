@@ -1,8 +1,9 @@
-+++
-date = '2025-02-14T12:37:54-08:00'
-draft = false
-title = 'Blogging my journey'
-+++
+---
+date: 2025-02-14T12:37:54-08:00
+draft: false
+title: "Blogging my journey"
+type: "blog"
+---
 
 About a week into my code learning journey I got a tip from a friend. He shared
 his repo where he'd stored all his leetcode solutions. This was brilliant. The
