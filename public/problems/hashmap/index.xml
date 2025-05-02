@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hashmap Problems on Learning to code</title>
-    <link>http://localhost:1313/problems/hashmap/</link>
+    <link>https://blog.ladevzo.com/problems/hashmap/</link>
     <description>Recent content in Hashmap Problems on Learning to code</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 08 Mar 2025 10:05:55 -0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/problems/hashmap/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.ladevzo.com/problems/hashmap/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ransom Note</title>
-      <link>http://localhost:1313/problems/hashmap/can-construct/</link>
+      <link>https://blog.ladevzo.com/problems/hashmap/can-construct/</link>
       <pubDate>Sat, 08 Mar 2025 10:05:55 -0800</pubDate>
-      <guid>http://localhost:1313/problems/hashmap/can-construct/</guid>
+      <guid>https://blog.ladevzo.com/problems/hashmap/can-construct/</guid>
       <description>&lt;p&gt;In this problem we&amp;rsquo;re given a magazine and a ransom note. We have to determine&#xA;if the magazine has enough letters to construct the ransom note.&lt;/p&gt;&#xA;&lt;p&gt;The approach I used was a single map. Iterate through the magazine, storing each&#xA;letter as a key, and incrementing it&amp;rsquo;s value every time you add an instance of a&#xA;letter.&lt;/p&gt;&#xA;&lt;p&gt;Then, iterate through the ransom note. Each time you evaluate a letter,&#xA;check for it in your map. If you don&amp;rsquo;t find it, you can fail early. If you do&#xA;find it, decrement the count. Do a quick check to make sure the count didn&amp;rsquo;t go&#xA;below 0. If it did, then the magazine does not have enough of that letter.&lt;/p&gt;</description>
     </item>
   </channel>
